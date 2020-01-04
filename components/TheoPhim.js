@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Header, Content, Icon, Accordion, Text, View, Thumbnail, Left, Body, Right, List, ListItem } from "native-base";
-import { Image, FlatList, TouchableOpacity } from 'react-native';
+import { Image, FlatList, TouchableOpacity ,StyleSheet} from 'react-native';
 import { withNavigation } from "react-navigation";
 
 const dataArray = [
@@ -106,7 +106,7 @@ const dataArray = [
     },
 ];
 
- class Cinema extends Component {
+class TheoPhim extends Component {
     _renderHeader(item, expanded) {
         return (
             <View style={{
@@ -157,6 +157,19 @@ const dataArray = [
                                     </TouchableOpacity>
                                 </ListItem>
                             </List>
+                            <View style={{ flexDirection: "row", marginLeft: 30 }}>
+                                <Text style={{ paddingTop: 10, fontSize: 20, color: "gray", fontWeight: '700' }}>2D</Text>
+
+                                <TouchableOpacity onPress={() => this.props.navigation.navigate('DatGheRap')}>
+                                    <Text note style={styles.txt}>9:30</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => this.props.navigation.navigate('DatGheRap')}>
+                                    <Text note style={styles.txt}>11:30</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => this.props.navigation.navigate('DatGheRap')}>
+                                    <Text note style={styles.txt}>13:30</Text>
+                                </TouchableOpacity>
+                            </View>
                         </Content>
                     )}
                 //keyExtractor={item => item.key}
@@ -180,4 +193,17 @@ const dataArray = [
         );
     }
 }
-export default withNavigation(Cinema);
+
+const styles=StyleSheet.create(
+    {
+        txt: {
+            backgroundColor: '#4050B5',
+            fontSize: 17, width: 60,
+            color: '#fff',
+            marginTop: 10,
+            textAlign: 'center',
+            marginLeft: 30
+        }
+    }
+)
+export default withNavigation(TheoPhim);

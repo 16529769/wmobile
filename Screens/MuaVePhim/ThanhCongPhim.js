@@ -7,7 +7,7 @@ import {
 } from 'react-native-material-textfield';
 import { Button, Thumbnail, Icon } from 'native-base'
 
-export default class ThanhCongNapThe extends Component {
+export default class ThanhCongPhim extends Component {
     static navigationOptions = {
         navigationOptions: {
             header: null
@@ -22,24 +22,27 @@ export default class ThanhCongNapThe extends Component {
             <View style={styles.container}>
                 <View style={styles.top}>
                     <Icon name="checkmark-circle-outline" style={{ color: 'white', fontSize: 100 }}></Icon>
-                    <Text style={{color:"white",fontWeight:'700',marginTop:10,fontSize:18}}>GIAO DỊCH THÀNH CÔNG</Text>
+                    <Text style={{ color: "white", fontWeight: '700', marginTop: 10, fontSize: 18 }}>GIAO DỊCH THÀNH CÔNG</Text>
 
                 </View>
 
                 <View style={styles.center0}>
-                    <Text style={{  fontWeight: '700', marginTop: 10,fontSize:16,textAlign:'center'}}> Bạn đã nạp số tiền 10.000đ vào số điện thoại 0344048137 </Text>
+                    <Text style={{ fontWeight: '700', marginTop: 10, fontSize: 16, textAlign: 'center' }}>Bạn đã mua thành công vé xem phim CGV Aeon Bình Tân</Text>                   
                 </View>
                 <View style={styles.center}>
-                    
+
                     <View style={styles.center1}>
                         <Text style={styles.txt1}>Số dư trong ví</Text>
                         <Text style={styles.txt2}>194.000đ</Text>
                     </View>
-                    <View style={{ borderBottomWidth: 0.2, backgroundColor: '#e8e8e8', borderRadius: 0.2, marginBottom: 8 }}></View>
+                    <View style={{ borderBottomWidth: 0.2, backgroundColor: '#e8e8e8', borderRadius: 0.2, marginBottom: 10 }}></View>
                     <View style={styles.center1}>
                         <Text style={styles.txt1}>Mã giao dịch</Text>
-                        <Text style={{fontSize:16,color:'green'}}>11240497</Text>
+                        <Text style={{ fontSize: 16, color: 'green' }}>12324497</Text>
                     </View>
+                    <Text style={{ fontSize: 16,textAlign:"center" }}>Vui lòng đưa mã giao dịch cho nhân viên tại quầy để lấy vé</Text>
+
+
                 </View>
                 <View style={{
                     flex: 1,
@@ -62,8 +65,7 @@ const styles = StyleSheet.create(
     {
         container: {
             flex: 1,
-            backgroundColor: '#e8e8e8',
-            flexDirection: 'column',
+            backgroundColor: '#e8e8e8'
         },
 
         top: {

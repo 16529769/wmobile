@@ -46,7 +46,7 @@ export default class ThanhToanDien extends Component {
                     <ListItem thumbnail style={styles.list}>
                         <Left>
                             <Button style={{ backgroundColor: "#fff" }}>
-                                <Image source={require('../../components/icon/dienluc2.png')} />
+                                <Image source={require('../../components/icon/evnhn.png')}/>
                             </Button>
                         </Left>
                         <Body>
@@ -63,7 +63,7 @@ export default class ThanhToanDien extends Component {
                     <ListItem thumbnail style={styles.list}>
                         <Left>
                             <Button style={{ backgroundColor: "#fff" }}>
-                                <Image source={require('../../components/icon/dienluc2.png')} />
+                                <Image source={require('../../components/icon/EVNCPC.png')} />
                             </Button>
                         </Left>
                         <Body>
@@ -79,7 +79,7 @@ export default class ThanhToanDien extends Component {
                     <ListItem thumbnail style={styles.list}>
                         <Left>
                             <Button style={{ backgroundColor: "#fff" }}>
-                                <Image source={require('../../components/icon/dienluc2.png')} />
+                                <Image source={require('../../components/icon/spc.png')} />
                             </Button>
                         </Left>
                         <Body>
@@ -96,7 +96,7 @@ export default class ThanhToanDien extends Component {
                     <ListItem thumbnail style={styles.list}>
                         <Left>
                             <Button style={{ backgroundColor: "#fff" }}>
-                                <Image source={require('../../components/icon/dienluc2.png')} />
+                                <Image source={require('../../components/icon/npc.png')} />
                             </Button>
                         </Left>
                         <Body>

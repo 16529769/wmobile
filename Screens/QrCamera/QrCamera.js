@@ -3,10 +3,12 @@ import { RNCamera } from 'react-native-camera';
 import {
     View,
     StyleSheet,
-    Dimensions
+    Dimensions,
+    Button,
+    TouchableOpacity
 } from 'react-native';
 
-import { Button, Text } from 'native-base';
+import { Text } from 'native-base';
 
 class QrCamera extends Component {
     constructor(props) {
@@ -14,6 +16,7 @@ class QrCamera extends Component {
         this.state = {};
     }
     render() {
+        const {navi} = this.props.navigation;
         return (
             <View style={{ flex: 1 }}>
                 <RNCamera style={{ flex: 1, ...StyleSheet.absoluteFill }} />
@@ -36,13 +39,9 @@ class QrCamera extends Component {
                             <View style={{ flex: 1, borderRightWidth: 4, borderBottomWidth: 4, borderColor: 'white' }} />
                         </View>
                     </View>
-                    <Button rounded
-                    onPress={()=>this.navigation.navigate('home')}
-                    >
-                        <Text style={{fontSize:18}}>
-                            Xác Nhận
-                        </Text>
-                    </Button>
+                    <Button title = " Xác Nhận "
+                    color="#4050B5"
+                    onPress = { () => this.props.navigation.navigate('ChiTietHoaDonOnline')}></Button>
                 </View>
 
             </View>

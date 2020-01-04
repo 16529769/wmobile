@@ -19,8 +19,22 @@ import ThanhCongChuyenTien from './Screens/ChuyenTien/ThanhCongChuyenTien';
 import ThongTinHoaDonDien from './Screens/ThanhToanDien/ThongTinHoaDonDien';
 import SafeTransferDien from './Screens/ThanhToanDien/SafeTransferDien';
 import ThanhCongDien from './Screens/ThanhToanDien/ThanhCongDien';
-import RNCamera from './Screens/QrCamera/QrCamera';
-
+import QrCamera from './Screens/QrCamera/QrCamera';
+import ThanhCongNapThe from './Screens/MuaTheDienThoai/ThanhCongMuaMaThe';
+import MuaTheGame from './Screens/MuaTheGame/MuaTheGame';
+import MuaTheChiTiet from './Screens/MuaTheGame/MuaTheChiTiet';
+import XacNhan from './Screens/MuaTheGame/XacNhan';
+import ThanhCongMuaMaThe from './Screens/MuaTheGame/ThanhCongTheGame';
+import ChiTietHoaDon from './Screens/QrCamera/ChiTietHoaDon';
+import XacNhanThanhToanHoaDon from './Screens/QrCamera/XacNhanThanhToanHoaDon';
+import ThanhCongQr from './Screens/QrCamera/ThanhCongQr';
+import ChiTietPhim from './Screens/MuaVePhim/ChiTietPhim';
+import DatRap from './Screens/MuaVePhim/DatRap';
+import DatGheRap from './Screens/MuaVePhim/DatGheRap';
+import ThongTinNguoiNhan from './Screens/MuaVePhim/ThongTinNguoiNhan';
+import HoaDonMuaPhim from './Screens/MuaVePhim/HoaDonMuaPhim';
+import ThanhCongPhim from './Screens/MuaVePhim/ThanhCongPhim';
+import DatPhim from './Screens/MuaVePhim/DatPhim';
 const AppNavigator = createStackNavigator(
   {
     Login:
@@ -78,6 +92,12 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
+    ThanhCongMuaMaThe: {
+      screen: ThanhCongNapThe,
+      navigationOptions: {
+        header: null
+      }
+    },
     ThanhCongChuyenTien: {
       screen: ThanhCongChuyenTien,
       navigationOptions: {
@@ -97,20 +117,68 @@ const AppNavigator = createStackNavigator(
       }
     },
     RNCamera:{
-      screen:RNCamera,
+      screen:QrCamera,
       navigationOptions: {
         header: null
       }
+    },
+    MuaTheGameOnline: {
+      screen: MuaTheGame,
+      
+    },
+    MuaTheGameOnlineChiTiet : {
+      screen: MuaTheChiTiet,
+    },
+    XacNhanMuaMaTheGame: {
+      screen: XacNhan
+    },
+    ThanhCongMuaMaTheGame: {
+      screen: ThanhCongMuaMaThe,
+      navigationOptions: {
+        header: null
+      }
+    },
+    ChiTietHoaDonOnline : {
+      screen: ChiTietHoaDon
+    },
+    XacNhanHoaDonOnline: {
+      screen:XacNhanThanhToanHoaDon
+    },
+    ThanhToanThanhCongQr: {
+      screen: ThanhCongQr,
+      navigationOptions: {
+        header:null
+      }
+    },
+    ChiTietPhim:{
+      screen: ChiTietPhim, 
+    },
+    DatRap: {
+      screen: DatRap,
+    },
+    DatGheRap: {
+      screen: DatGheRap,
+    },
+    ThongTinNguoiNhan: {
+      screen: ThongTinNguoiNhan,
+    },
+    HoaDonMuaPhim:{
+      screen:HoaDonMuaPhim,
+    },
+    ThanhCongPhim:{
+      screen: ThanhCongPhim,
+      navigationOptions:{
+        header:null,
+      }
+    },
+    DatPhim:{
+      screen:DatPhim,
     }
+   
   },
-
   {
     initialRouteName: 'Login',
-    headerLayoutPreset:'center',
-    headerMode:"float",
-    headerTransitionPreset:{
-      
-    }
+    headerLayoutPreset:'center', 
   }
 );
 

@@ -2,6 +2,7 @@ import Carousel from 'react-native-snap-carousel';
 import React, { Component } from 'react';
 import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import { Thumbnail, Button, Text, } from 'native-base'
+import { withNavigation } from 'react-navigation';
 
 const data = [
     {
@@ -54,7 +55,7 @@ const sliderWidth = Dimensions.get('window').width;
 const itemWidth = slideWidth + horizontalMargin * 2;
 const itemHeight = 250;
 
-export default class MyCarousel extends Component {
+class MyCarousel extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -70,7 +71,9 @@ export default class MyCarousel extends Component {
                     source={{ uri: item.uri }}
                 />
                 <Text style={{ color: '#fff', marginTop: 10, paddingBottom: 10 }}>{item.title}</Text>
-                <Button primary style={{ width: 80, height: 30 }}><Text style={{ textAlign: 'center' }}>Đặt vé</Text></Button>
+                <Button primary 
+                onPress={()=>this.props.navigation.navigate("DatPhim")}
+                style={{ width: 80, height: 30 }}><Text style={{ textAlign: 'center' }}>Đặt vé</Text></Button>
             </View>
 
 
@@ -123,3 +126,6 @@ const styles = StyleSheet.create(
         }
     }
 )
+
+
+export default withNavigation(MyCarousel);

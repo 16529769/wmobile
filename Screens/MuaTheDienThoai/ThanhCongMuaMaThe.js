@@ -6,8 +6,9 @@ import {
     OutlinedTextField,
 } from 'react-native-material-textfield';
 import { Button, Thumbnail, Icon } from 'native-base'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default class ThanhCongNapThe extends Component {
+export default class ThanhCongMuaMaThe extends Component {
     static navigationOptions = {
         navigationOptions: {
             header: null
@@ -27,7 +28,7 @@ export default class ThanhCongNapThe extends Component {
                 </View>
 
                 <View style={styles.center0}>
-                    <Text style={{  fontWeight: '700', marginTop: 10,fontSize:16,textAlign:'center'}}> Bạn đã nạp số tiền 10.000đ vào số điện thoại 0344048137 </Text>
+                    <Text style={{  fontWeight: '700', marginTop: 10,fontSize:16,textAlign:'center'}}> Bạn đã mua thành công mã thẻ Mobifone mệnh giá 10.000đ </Text>
                 </View>
                 <View style={styles.center}>
                     
@@ -40,6 +41,15 @@ export default class ThanhCongNapThe extends Component {
                         <Text style={styles.txt1}>Mã giao dịch</Text>
                         <Text style={{fontSize:16,color:'green'}}>11240497</Text>
                     </View>
+                    <View style={styles.center1}>
+                        <Text style={styles.txt1}>Mã thẻ</Text>
+                        <Text style={{fontSize:16,color:'green'}}>1382371827381</Text>
+                    </View>
+                    <View style={styles.center1}>
+                        <Text style={styles.txt1}>Số serial </Text>
+                        <Text style={{fontSize:16,color:'green'}}>PEW23812</Text>
+                    </View>
+                    
                 </View>
                 <View style={{
                     flex: 1,
@@ -135,3 +145,4 @@ const styles = StyleSheet.create(
 
     }
 )
+

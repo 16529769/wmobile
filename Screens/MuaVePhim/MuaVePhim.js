@@ -7,8 +7,9 @@ import Cinema from '../../components/Cinema';
 import { SliderBox } from 'react-native-image-slider-box';
 import MyCarousel from '../../components/SnapCarousel';
 import PhimSapChieu from '../../components/PhimSapChieu';
+import { withNavigation } from 'react-navigation';
 
-export default class MuaVeXemPhim extends Component {
+class MuaVeXemPhim extends Component {
     static navigationOptions = {
         title: 'Mua vé xem phim',
         headerStyle: {
@@ -97,3 +98,5 @@ const styles = StyleSheet.create(
 
     }
 )
+
+export default withNavigation(MuaVeXemPhim);

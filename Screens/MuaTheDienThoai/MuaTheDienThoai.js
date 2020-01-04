@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { View, Image, StyleSheet, Dimensions, Text, ScrollView, TextInput } from 'react-native'
-
 import Divider, { divider } from 'react-native-divider';
 import { Button, Icon, Item, Input, Header, Container, Tab, Tabs, TabHeading } from 'native-base';
-
 import NhaMang from '../../components/NhaMang';
 import MenhGiaThe from '../../components/MenhGiaThe';
 import { TouchableOpacity } from 'react-native-gesture-handler';

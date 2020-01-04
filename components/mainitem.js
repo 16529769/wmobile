@@ -52,7 +52,7 @@ const Data = [
         picture: require('../components/icon/menudown.png'),
         iname: "logo-game-controller-a",
         color: '#4050B5',
-        screen: 'Dien'
+        screen: 'MuaTheGameOnline'
     },
    
 

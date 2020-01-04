@@ -7,7 +7,7 @@ import {
 } from 'react-native-material-textfield';
 import { Button, Thumbnail } from 'native-base'
 
-export default class SafeTransferTheDienThoai2 extends Component {
+export default class XacNhanThanhToanHoaDon extends Component {
     static navigationOptions = {
         title: 'Thanh toán an toàn',
         headerStyle: {
@@ -34,37 +34,63 @@ export default class SafeTransferTheDienThoai2 extends Component {
                     </View>
                     <Button transparent><Text style={{ color: '#4050B5', fontWeight: 'bold' }}>Thay đổi</Text></Button>
                 </View>
-                <Text style={styles.txt}>CHI TIẾT GIAO DỊCH</Text>
-
-
+                <Text style={styles.txt}>THÔNG TIN KHÁCH HÀNG</Text>
                 <View style={styles.center}>
                     <View style={styles.center1}>
-                        <Text style={styles.txt1}>Nạp cho</Text>
-                        <Text style={styles.txt2}>Huynh Ngoc Liem</Text>
+                        <Text style={styles.txt1}>Nhà cung cấp</Text>
+                        <Text style={styles.txt2}>FE Credit</Text>
                     </View>
+
+
                     <View style={styles.center1}>
-                        <Text style={styles.txt1}>Số điện thoại</Text>
+                        <Text style={styles.txt1}>Mã khách hàng</Text>
+                        <Text style={styles.txt2}>ZXEGAAFA23</Text>
+                    </View>
+
+
+                    <View style={styles.center1}>
+                        <Text style={styles.txt1}>Khách hàng</Text>
+                        <Text style={styles.txt2}>HUYNH NGOC LIEM</Text>
+                    </View>
+
+
+                    <View style={styles.center1}>
+                        <Text style={styles.txt1}>Địa chỉ</Text>
+                        <Text style={styles.txt2}>Thửa 244 TBD 31 Phạm văn đồng -{'\n'}                      P13, Quận Bình Thạnh</Text>
+                    </View>
+
+
+                    <View style={styles.center1}>
+                        <Text style={styles.txt1}>Điện thoại</Text>
                         <Text style={styles.txt2}>0344048137</Text>
                     </View>
+
                     <View style={styles.center1}>
-                        <Text style={styles.txt1}>Nhà mạng</Text>
-                        <Text style={styles.txt2}>Mobifone</Text>
+                        <Text style={styles.txt1}>Chi tiết hóa đơn</Text>
+                        <Text style={styles.txt2}>Hóa Đơn Hợp Đồng Trả Góp</Text>
                     </View>
+
+                    <View style={{ borderBottomWidth: 0.2, backgroundColor: '#e8e8e8',  marginBottom: 10 }}></View>
+
                     <View style={styles.center1}>
-                        <Text style={styles.txt1}>Mệnh giá</Text>
-                        <Text style={styles.txt2}>10.000đ</Text>
+                        <Text style={styles.txt1}>Số tiền</Text>
+                        <Text style={styles.txt2}>467.986đ</Text>
                     </View>
-                    <View style={{ borderBottomWidth: 0.2, backgroundColor: '#e8e8e8', borderRadius: 0.2, marginBottom: 10 }}></View>
+                    <View style={{ borderBottomWidth: 0.2, backgroundColor: '#e8e8e8', marginBottom: 10 }}></View>
                     <View style={styles.center1}>
                         <Text style={styles.txt1}>Phí giao dịch</Text>
                         <Text style={styles.txt2}>Miễn phí</Text>
                     </View>
-                    <View style={{ borderBottomWidth: 0.2, backgroundColor: '#e8e8e8', borderRadius: 0.2, marginBottom: 10 }}></View>
+                    <View style={{ borderBottomWidth: 0.2, backgroundColor: '#e8e8e8',  marginBottom: 10 }}></View>
                     <View style={styles.center1}>
                         <Text style={styles.txt1}>Tổng tiền</Text>
-                        <Text style={styles.txt2} style={{ fontSize: 20, fontWeight: 'bold' }}>10.000đ</Text>
+                        <Text style={{fontSize:20,fontWeight:'700'}}>467.986đ</Text>
                     </View>
+
                 </View>
+
+
+
                 <View style={{
                     flex: 1,
                     flexDirection: 'column',
@@ -72,12 +98,12 @@ export default class SafeTransferTheDienThoai2 extends Component {
                     marginHorizontal: 10,
                     paddingBottom: 20
                 }}>
-                    <Button block onPress={() => this.props.navigation.navigate('ThanhCongMuaMaThe')}>
-                        <Text style={{ color: '#fff', fontSize: 18}}>Xác Nhận</Text>
+                    <Button block onPress={() => this.props.navigation.navigate('ThanhToanThanhCongQr')}>
+                        <Text style={{ color: '#fff', fontSize: 18 }}>Xác Nhận</Text>
                     </Button>
                 </View>
 
-            </View>
+            </View >
         );
     }
 }
@@ -104,7 +130,7 @@ const styles = StyleSheet.create(
             //height:200,
             flexDirection: 'row',
             justifyContent: 'space-between',
-            alignItems: 'center'
+
         },
 
         center: {

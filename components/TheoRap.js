@@ -61,7 +61,7 @@ const DATA = [
     },
 ];
 
-class PhimSapChieu extends Component {
+class TheoRap extends Component {
 
     render() {
         return (
@@ -74,20 +74,34 @@ class PhimSapChieu extends Component {
                             <Content >
                                 <List>
                                     <ListItem avatar>
-                                        <TouchableOpacity activeOpacity={0.8} onPress={()=>this.props.navigation.navigate(item.screen)}>
+                                        <TouchableOpacity activeOpacity={0.8} onPress={() => this.props.navigation.navigate(item.screen)}>
                                             <Left>
-                                                <Thumbnail square large source={{ uri: item.uri }} resizeMethod="scale" style={{ width: 100, height: 150 }} />
+                                                <Thumbnail square large source={{ uri: item.uri }} resizeMethod="scale" style={{ width: 50, height: 50 }} />
                                             </Left>
                                         </TouchableOpacity>
+
                                         <TouchableOpacity activeOpacity={0.8} onPress={() => this.props.navigation.navigate(item.screen)}>
                                             <Body>
                                                 <Text>{item.phim}</Text>
                                                 <Text note>{item.chitiet}</Text>
-                                                <Text note style={{ backgroundColor: '#4050B5', width: 80, borderRadius: 20, color: '#fff' }}>{item.ngay}</Text>
+                                                <Text note style={{ backgroundColor: '#4050B5', width: 80, borderRadius: 20, color: '#fff', marginTop: 3 }}>{item.ngay}</Text>
                                             </Body>
                                         </TouchableOpacity>
                                     </ListItem>
                                 </List>
+                                <View style={{ flexDirection: "row", marginLeft: 30 }}>
+                                    <Text style={{ paddingTop: 10, fontSize: 20, color: "gray", fontWeight: '700' }}>2D</Text>
+
+                                    <TouchableOpacity onPress={() => this.props.navigation.navigate('DatGheRap')}>
+                                        <Text note style={styles.txt}>9:30</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity onPress={() => this.props.navigation.navigate('DatGheRap')}>
+                                        <Text note style={styles.txt}>11:30</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity onPress={() => this.props.navigation.navigate('DatGheRap')}>
+                                        <Text note style={styles.txt}>13:30</Text>
+                                    </TouchableOpacity>
+                                </View>
                             </Content>
                         </View>
                     )}
@@ -111,9 +125,17 @@ const styles = StyleSheet.create(
             marginTop: 10
 
         },
+        txt: {
+            backgroundColor: '#4050B5',
+            fontSize: 17, width: 60,
+            color: '#fff',
+            marginTop: 10,
+            textAlign: 'center',
+            marginLeft: 30
+        }
 
 
     }
 )
 
-export default withNavigation(PhimSapChieu);
+export default withNavigation(TheoRap);
